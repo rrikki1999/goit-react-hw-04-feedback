@@ -33,13 +33,14 @@ export const App = () => {
     return totalFeedback === 0 ? 0 : (feedback.good / totalFeedback) * 100;
   };
 
-  const feedbackOptions = ['good', 'neutral', 'bad'];
+  // const feedbackOptions = ['good', 'neutral', 'bad'];
 
   return (
     <div className={styles.app}>
       <Section title="Please leave Feedback">
+        
         <FeedbackOptions
-          options={feedbackOptions}
+          options={Object.keys(feedback)}
           onLeaveFeedback={handleLeaveFeedback}
         />
       </Section>
